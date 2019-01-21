@@ -20,3 +20,5 @@ public class Vol {
 	private String destination;
 
 }
+
+//Test Pour montrer l'utilité de fetch par fares
