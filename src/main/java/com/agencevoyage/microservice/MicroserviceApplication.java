@@ -23,6 +23,16 @@ public class MicroserviceApplication {
 		
 	
 	}
+	
+	public void reserverHotel() {
+		Hotel hotel = new Hotel();
+		Reservation reservation= new Reservation();
+		reservation.setHotel(hotel);
+		reservation.setDateDebut(LocalDate.now());
+		reservation.setDateDebut(LocalDate.now().plusDays(10));
+		
+	
+	}
 
 }
 
