@@ -20,6 +20,7 @@ public class Reservation {
 	private LocalDate dateDebut;
 	private LocalDate dateFin;
 	private Vol vol;
+	private Hotel hotel;
 
 	
 	
