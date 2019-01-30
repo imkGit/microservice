@@ -12,7 +12,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class Vol {
+public class Vol extends Reservation{
 
 	private String companie;
 	private Integer numeroVol;
