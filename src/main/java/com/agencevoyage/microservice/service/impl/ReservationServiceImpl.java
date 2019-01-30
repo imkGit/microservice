@@ -10,8 +10,19 @@ public class ReservationServiceImpl implements ReservationService<Reservation>  
 
 	@Override
 	public void reserver(Reservation t) {
-		// TODO Auto-generated method stub
+		//IK
+		//je propose une implémentation de la methode 
+		//reserver dont fares n'est pas d'accord
 		
+		//IK si reservation null alors j'imprime un message
+		//et je sors
+		if(null==t) {
+			System.out.println("aucune reservation en entrée");
+			return;
+		}
+		
+		//IK
+		//jappel hibernate pour sauvegarder la reservation
 	}
 
 
