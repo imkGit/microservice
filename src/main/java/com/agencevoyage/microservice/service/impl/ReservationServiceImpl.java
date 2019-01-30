@@ -10,20 +10,19 @@ public class ReservationServiceImpl implements ReservationService<Reservation>  
 
 	@Override
 	public void reserver(Reservation t) {
-		//IK
-		//je propose une implémentation de la methode 
-		//reserver dont fares n'est pas d'accord
+		//Fares ==> je propose cette implementation de la methode reserver
 		
-		//IK si reservation null alors j'imprime un message
-		//et je sors
-		if(null==t) {
-			System.out.println("aucune reservation en entrée");
-			return;
-		}
+				if(null==t) {
+					t = new Reservation();
+				}
+				
+				//Fares ==> j'appel hibernate pour sauvegarder la reservation dans la BD.
+				
+	}
 		
 		//IK
 		//jappel hibernate pour sauvegarder la reservation
 	}
 
 
-}
+
