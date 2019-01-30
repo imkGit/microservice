@@ -11,12 +11,13 @@ public class ReservationServiceImpl implements ReservationService<Reservation>  
 	@Override
 	public void reserver(Reservation t) {
 		//Fares ==> je propose cette implementation de la methode reserver
+
 		
-				if(null==t) {
-					t = new Reservation();
-				}
-				
-				//Fares ==> j'appel hibernate pour sauvegarder la reservation dans la BD.
+		if(null==t) {
+			t = new Reservation();
+		}
+		
+		//Fares ==> j'appel hibernate pour sauvegarder la reservation dans la BD.
 				
 	}
 		
