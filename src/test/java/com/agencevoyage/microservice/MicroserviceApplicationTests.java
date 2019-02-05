@@ -2,7 +2,9 @@ package com.agencevoyage.microservice;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiPredicate;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -50,6 +52,7 @@ public class MicroserviceApplicationTests {
 			};
 			// la meme avec lambda
 			ReservationService<Hotel> ii = ((hotel)-> { System.out.println("Mon traitement de reservation"+hotel); } );
+			ii.reserver(new Hotel());
 			
 			reservationServiceImpl.reserver(new Hotel());
 			
@@ -57,16 +60,21 @@ public class MicroserviceApplicationTests {
 			//(avant on utilise les classes abstraite ou factoriser le code en utilisant des classe utilitaresdonc statique )
 			reservationServiceImpl.reserver();
 			
-			// exemple de methode statique dans une interface
+			// exemple de methode statique dans une interface	
 			ReservationService.afficherRes("Reservation du test methode statique");
 			
 			// methode refrences :
 			// reference a une methode statique :
 			
-			
+			boolean istheSameHotel = istheSameHotel(new Hotel(),x-> ReservationService.isHotel(x));
 			
 		
 	}
+	
+	public boolean istheSameHotel(Hotel h,  Predicate<Hotel> p) {
+		return p.test(h);
+	}
+
 	private Integer calculerReservationHotel(final List<Hotel> list) {
 		//list.forEach(System.out::println);
 		List result = new ArrayList<Hotel>();

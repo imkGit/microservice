@@ -1,5 +1,6 @@
 package com.agencevoyage.microservice.service;
 
+import com.agencevoyage.microservice.Hotel;
 import com.agencevoyage.microservice.Reservation;
 
 @FunctionalInterface
@@ -16,6 +17,11 @@ public interface ReservationService<T> {
 	}
 	public static String afficherRes(String s) {
 		return s.toString();
+	}
+	public static boolean isHotel(Reservation t) {
+		if(t instanceof Hotel)
+		return true;
+		else return false;
 	}
 	
 }
