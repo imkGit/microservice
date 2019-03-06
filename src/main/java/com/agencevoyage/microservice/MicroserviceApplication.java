@@ -4,9 +4,17 @@ import java.time.LocalDate;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-public class MicroserviceApplication {
+public class MicroserviceApplication extends SpringBootServletInitializer {
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(MicroserviceApplication.class);
+    }
 
 	public static void main(String[] args) {
 		
